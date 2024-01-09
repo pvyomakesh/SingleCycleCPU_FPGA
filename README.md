@@ -24,7 +24,7 @@ This project involves the implementation of a single-cycle CPU using the Xilinx 
 
 ## Installation
 
-1. Clone the repository to your local machine using git clone [repository URL].
+1. Clone the repository to your local machine using git clone [https://github.com/pvyomakesh/SingleCycleCPU_FPGA.git].
 2. Open the project using Xilinx software.
 3. Configure your FPGA board settings as per the requirements of the project.
 4. Compile and upload the design to your FPGA.
@@ -42,7 +42,7 @@ This project involves the implementation of a single-cycle CPU using the Xilinx 
 ## Architecture
 The SingleCycleCPU_FPGA project is structured into several Verilog modules that together form a single-cycle CPU. The primary modules and their functions are as follows:
 
-### [`Datapath Module`](Modules\Datapath.v)
+### [`Datapath Module`](Modules/Datapath.v)
 
 * **Function**: Serves as the backbone of the CPU, interconnecting various components.
 * **Components**:
@@ -50,25 +50,25 @@ The SingleCycleCPU_FPGA project is structured into several Verilog modules that 
 - `scinstrmem`: Handles the instruction memory, fetching instructions based on the program counter (PC).
 - `sccpu`: Acts as the central unit, orchestrating the CPU's operations.
 
-### [`Data Memory Module`](Modules\scdatamem.v) (scdatamem)
+### [`Data Memory Module`](Modules/scdatamem.v) (scdatamem)
 
 * **Purpose**: Simulates the data memory (RAM) of the CPU.
 * **Key Features**:
 - Write and read operations based on the address and write enable signals.
 - Initialized with predefined values for simulation purposes.
 
-### [`Instruction Memory Module`](Modules\scinstrmem.v) (scinstrmem)
+### [`Instruction Memory Module`](Modules/scinstrmem.v) (scinstrmem)
 
 * **Function**: Simulates the instruction memory of the CPU.
 * **Implementation**:
 - Stores a predefined set of instructions for the CPU to execute.
 - Outputs instructions based on the current PC value.
 
-### [`CPU Module`](Modules\sccpu.v) (sccpu)
+### [`CPU Module`](Modules/sccpu.v) (sccpu)
 * **Role**: Central processing unit that controls the execution of instructions.
 * **Components**:
-- [`PC`](Modules\PC.v): Manages the program counter, updating it each clock cycle.
-- [`PCadder`](Modules\PCadder.v): Responsible for incrementing the PC.
+- [`PC`](Modules/PC.v): Manages the program counter, updating it each clock cycle.
+- [`PCadder`](Modules/PCadder.v): Responsible for incrementing the PC.
 - [`ControlUnit`](Modules\ControlUnit.v): Decodes instructions and generates appropriate control signals.
 - [`dstMUX`](Modules\dstMUX.v), [`MUX2to1`](Modules\MUX2to1.v): Multiplexers for routing data based on control signals.
 - [`signextend`](Modules\signextend.v): Extends immediate values for certain instruction types.
