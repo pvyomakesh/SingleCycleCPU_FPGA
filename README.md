@@ -69,12 +69,12 @@ The SingleCycleCPU_FPGA project is structured into several Verilog modules that 
 * **Components**:
 - [`PC`](Modules/PC.v): Manages the program counter, updating it each clock cycle.
 - [`PCadder`](Modules/PCadder.v): Responsible for incrementing the PC.
-- [`ControlUnit`](Modules\ControlUnit.v): Decodes instructions and generates appropriate control signals.
-- [`dstMUX`](Modules\dstMUX.v), [`MUX2to1`](Modules\MUX2to1.v): Multiplexers for routing data based on control signals.
-- [`signextend`](Modules\signextend.v): Extends immediate values for certain instruction types.
-- [`regfile`](Modules\regfile.v): Represents the register file of the CPU.
-- [`ALU`](Modules\ALU.v): Performs arithmetic and logical operations.
-- [`PCMux`](Modules\PCMux.v): Controls the PC's value based on various inputs, supporting jump and branch instructions.
+- [`ControlUnit`](Modules/ControlUnit.v): Decodes instructions and generates appropriate control signals.
+- [`dstMUX`](Modules/dstMUX.v), [`MUX2to1`](Modules/MUX2to1.v): Multiplexers for routing data based on control signals.
+- [`signextend`](Modules/signextend.v): Extends immediate values for certain instruction types.
+- [`regfile`](Modules/regfile.v): Represents the register file of the CPU.
+- [`ALU`](Modules/ALU.v): Performs arithmetic and logical operations.
+- [`PCMux`](Modules/PCMux.v): Controls the PC's value based on various inputs, supporting jump and branch instructions.
 
 ## Flow of Operation
 * **Instruction Fetch**: The scinstrmem module fetches the current instruction based on the PC.
