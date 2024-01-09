@@ -65,6 +65,5 @@ The current design is optimized for a single-cycle operation, with the potential
 Authors
 Vyomakesh Puduru - Initial Work - [pvyomakesh](https://github.com/pvyomakesh)
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details
+
 
